@@ -35,29 +35,43 @@ class Plugin_mobiledetect extends Plugin
 	public function _self_doc()
 	{
 		$info = array(
-			'detect' => array(
-				'description' => array(// a single sentence to explain the purpose of this method
-					'en' => 'Detect mobile devices',
-					'es' => 'Detecta dispositivos móviles'
-				),
-				'single' => true,// will it work as a single tag?
-				'double' => false,// how about as a double tag?
-				'variables' => '',// list all variables available inside the double tag. Separate them|like|this
-				'attributes' => array(
-					'get' => array(// this is the name="World" attribute
-						'type' => 'url',// Can be: slug, number, flag, text, array, any.
-						'flags' => '',// flags are predefined values like asc|desc|random.
-						'default' => 'current uri',// this attribute defaults to this if no value is given
-						'required' => true,// is this attribute required?
-					),
-					'tag' => array(
-						'type' => 'boolean',
-						'flags' => '1|0',
-						'default'=>'1',
-						'required'=>true
-					)
-				),
-			),
+            'isAndroidOS' => array(
+                'description' => array(// a single sentence to explain the purpose of this method
+                    'en' => 'Detect if device runs Android OS, returns boolean',
+                    'es' => 'Detecta si el dispositivo utiliza el Sistema Operativo Android'
+                ),
+                'single' => true,// will it work as a single tag?
+                'double' => false,// how about as a double tag?
+                'variables' => ''// list all variables available inside the double tag. Separate them|like|this
+            ),
+            'isiOS' => array(
+                'description' => array(// a single sentence to explain the purpose of this method
+                    'en' => 'Detect if device runs iOS OS, returns boolean',
+                    'es' => 'Detecta si el dispositivo utiliza el Sistema Operativo iOS'
+                ),
+                'single' => true,// will it work as a single tag?
+                'double' => false,// how about as a double tag?
+                'variables' => ''// list all variables available inside the double tag. Separate them|like|this
+            ),
+            'isMobile' => array(
+                'description' => array(// a single sentence to explain the purpose of this method
+                    'en' => 'Detect if device is a mobile device, returns boolean',
+                    'es' => 'Detecta si el dispositivo es un dispositivo móvil'
+                ),
+                'single' => true,// will it work as a single tag?
+                'double' => false,// how about as a double tag?
+                'variables' => ''// list all variables available inside the double tag. Separate them|like|this
+            ),
+            'isTablet' => array(
+                'description' => array(// a single sentence to explain the purpose of this method
+                    'en' => 'Detect if device is a tablet device, returns boolean',
+                    'es' => 'Detecta si el dispositivo es una tableta, devuelve un valor booleano'
+                ),
+                'single' => true,// will it work as a single tag?
+                'double' => false,// how about as a double tag?
+                'variables' => ''// list all variables available inside the double tag. Separate them|like|this
+            ),
+
 		);
 	
 		return $info;
