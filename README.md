@@ -26,6 +26,14 @@ This is an Android Device
 This is not an Android Device
 {{ endif }}
 
+## Check if device is running iOS OS
+
+{{ if { mobiledetect:isiOS } }}
+This is an iOS Device
+{{ else }}
+This is not an iOS Device
+{{ endif }}
+
 ## Check if device is a tablet
 {{ if { mobiledetect:isTablet } }}
 This is a Tablet Device
