@@ -42,17 +42,24 @@ This is an iPhone Device
 This is not an iPhone Device
 {{ endif }}
 
-## Check if device is iPod
+## Check if device is iPad
 
-{{ if { mobiledetect:isiPod } }}
-This is an iPod Device
+{{ if { mobiledetect:isiPad } }}
+This is an iPad Device
 {{ else }}
-This is not an iPod Device
+This is not an iPad Device
 {{ endif }}
 
 ## Check if device is a tablet
-{{ if { mobiledetect:isTablet } }}
+{{ if { mobiledetect:istablet } }}
 This is a Tablet Device
 {{ else }}
 This is not a Tablet Device
+{{ endif }}
+
+## Check if device is a Samsung tablet
+{{ if { mobiledetect:isSamsungTablet } }}
+This is a Samsung Tablet Device
+{{ else }}
+This is not a Samsung Tablet Device
 {{ endif }}
